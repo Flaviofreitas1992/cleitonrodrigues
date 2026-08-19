@@ -65,16 +65,16 @@
   left: clamp(26px, 4vw, 48px);
   z-index: 3;
   margin: 0;
-  color: #fffdf8;
-  text-shadow: 0 2px 18px rgba(10, 25, 20, .28);
+  color: #102a22;
+  text-shadow: 0 1px 0 rgba(255,255,255,.72), 0 2px 14px rgba(255,255,255,.42);
 }
 
 .brand strong {
-  color: #fffdf8;
+  color: #102a22;
 }
 
 .brand span {
-  color: rgba(255,255,255,.82);
+  color: rgba(16,42,34,.84);
   opacity: 1;
 }
 
