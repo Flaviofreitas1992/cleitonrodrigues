@@ -1,4 +1,4 @@
-/* Hero sem sobreposição: imagem isolada e conteúdo abaixo */
+/* Hero com imagem isolada; apenas a identificação profissional permanece sobre a foto */
 .hero {
   min-height: 0;
   display: block;
@@ -43,13 +43,21 @@
 }
 
 .brand {
-  position: static;
-  margin-bottom: clamp(36px, 5vw, 64px);
-  color: var(--ink);
+  position: absolute;
+  top: clamp(26px, 4vw, 48px);
+  left: clamp(26px, 4vw, 48px);
+  z-index: 3;
+  margin: 0;
+  color: #fffdf8;
+  text-shadow: 0 2px 18px rgba(10, 25, 20, .28);
+}
+
+.brand strong {
+  color: #fffdf8;
 }
 
 .brand span {
-  color: var(--muted);
+  color: rgba(255,255,255,.82);
   opacity: 1;
 }
 
@@ -124,10 +132,10 @@ h1 {
   }
 
   .brand {
-    position: static;
-    top: auto;
-    left: auto;
-    margin-bottom: 34px;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    margin: 0;
   }
 
   .hero-copy {
@@ -163,7 +171,8 @@ h1 {
   }
 
   .brand {
-    margin-bottom: 28px;
+    top: 20px;
+    left: 20px;
   }
 
   .eyebrow {
