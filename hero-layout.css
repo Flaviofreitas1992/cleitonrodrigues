@@ -1,4 +1,4 @@
-/* Hero com imagem isolada; apenas a identificação profissional permanece sobre a foto */
+/* Hero com imagem isolada; identificação profissional e modalidade permanecem sobre a foto */
 .hero {
   min-height: 0;
   display: block;
@@ -19,6 +19,23 @@
   height: clamp(420px, 62vh, 720px);
   overflow: hidden;
   background: #d7d0c4;
+}
+
+.hero-media::after {
+  content: "Atendimento psicanalítico online";
+  position: absolute;
+  left: clamp(26px, 4vw, 48px);
+  bottom: clamp(28px, 4vw, 46px);
+  z-index: 3;
+  max-width: calc(100% - 52px);
+  color: #fffdf8;
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 18px rgba(10, 25, 20, .38);
 }
 
 .hero-media img {
@@ -67,8 +84,7 @@
 }
 
 .eyebrow {
-  color: var(--forest-2);
-  opacity: 1;
+  display: none;
 }
 
 h1 {
@@ -122,6 +138,12 @@ h1 {
     aspect-ratio: 4 / 5;
   }
 
+  .hero-media::after {
+    left: 24px;
+    bottom: 30px;
+    max-width: calc(100% - 48px);
+  }
+
   .hero-media img {
     object-position: 50% 36%;
   }
@@ -166,6 +188,14 @@ h1 {
     aspect-ratio: 4 / 5.2;
   }
 
+  .hero-media::after {
+    left: 20px;
+    bottom: 26px;
+    max-width: calc(100% - 40px);
+    font-size: .72rem;
+    letter-spacing: .14em;
+  }
+
   .hero-inner {
     padding: 26px 20px 30px;
   }
@@ -173,10 +203,6 @@ h1 {
   .brand {
     top: 20px;
     left: 20px;
-  }
-
-  .eyebrow {
-    margin-bottom: 16px;
   }
 
   h1 {
